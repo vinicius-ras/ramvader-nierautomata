@@ -1,0 +1,186 @@
+<!--
+ - Copyright (C) 2018 Vinicius Rogério Araujo Silva
+ -
+ - This file is part of RAMvader-NieRAutomata.
+ -
+ - RAMvader-NieRAutomata is free software: you can redistribute it and/or modify
+ - it under the terms of the GNU General Public License as published by
+ - the Free Software Foundation, either version 3 of the License, or
+ - (at your option) any later version.
+ -
+ - RAMvader-NieRAutomata is distributed in the hope that it will be useful,
+ - but WITHOUT ANY WARRANTY; without even the implied warranty of
+ - MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ - GNU General Public License for more details.
+ -
+ - You should have received a copy of the GNU General Public License
+ - along with RAMvader-NieRAutomata. If not, see <http://www.gnu.org/licenses/>.
+ -->
+<Window x:Class="TrainerApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TrainerApp"
+		xmlns:props="clr-namespace:TrainerApp.Properties"
+		xmlns:sys="clr-namespace:System;assembly=mscorlib"
+		xmlns:converters="clr-namespace:TrainerApp.Converters"
+        mc:Ignorable="d"
+		DataContext="{Binding RelativeSource={RelativeSource Self}}"
+        Title="{x:Static props:Resources.strMainWindowTitle}" Height="350" Width="630"
+		SizeToContent="Height"
+		Icon="/media/icon.ico"
+		Closing="WindowClosing">
+	<Window.Resources>
+		<!-- Instances of converters -->
+		<converters:BooleanInverterConverter x:Key="converterBooleanInverter" />
+
+		<!-- This style makes things visible only when the trainer is attached to the game. -->
+		<Style x:Key="styleVisibleWhenAttached" TargetType="FrameworkElement">
+			<Setter Property="Visibility" Value="Hidden" />
+			<Style.Triggers>
+				<DataTrigger Binding="{Binding Path=GameMemoryIO.Attached}" Value="True">
+					<Setter Property="Visibility" Value="Visible" />
+				</DataTrigger>
+			</Style.Triggers>
+		</Style>
+
+		<Style x:Key="styleVisibleWhenAttachedLabel" TargetType="Label" BasedOn="{StaticResource styleVisibleWhenAttached}">
+			<Setter Property="VerticalAlignment" Value="Center" />
+		</Style>
+
+		<Style TargetType="GroupBox">
+			<Setter Property="Margin" Value="3" />
+			<Setter Property="Padding" Value="3" />
+			<Setter Property="FontWeight" Value="Bold" />
+		</Style>
+
+		<Style TargetType="Label">
+			<Setter Property="FontWeight" Value="Normal" />
+		</Style>
+
+		<Style x:Key="stylePromptLabel" TargetType="Label">
+			<Setter Property="FontWeight" Value="Bold" />
+			<Setter Property="HorizontalAlignment" Value="Right" />
+		</Style>
+	</Window.Resources>
+	<Grid>
+		<!-- Row and column definitions -->
+		<Grid.RowDefinitions>
+			<RowDefinition Height="auto" />
+			<RowDefinition Height="auto" />
+			<RowDefinition Height="*" />
+			<RowDefinition Height="auto" />
+		</Grid.RowDefinitions>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="*" />
+		</Grid.ColumnDefinitions>
+
+
+		<!-- Window's menu -->
+		<Menu>
+			<MenuItem Header="{x:Static props:Resources.strMenuItemMoreOptions}">
+				<MenuItem Header="{x:Static props:Resources.strMenuItemHelp}" ToolTip="{x:Static props:Resources.strToolTipMenuItemHelp}" Click="MenuItemHelpClicked" />
+				<MenuItem Header="{x:Static props:Resources.strMenuItemGameSearchOptions}">
+					<MenuItem Header="{x:Static props:Resources.strMenuItemSearchAutomatically}" ToolTip="{x:Static props:Resources.strToolTipRestartLookingForGame}" IsCheckable="True" IsChecked="{Binding Path=AutomaticallySearchForGame,Mode=OneWay}" Click="MenuItemSearchAutomaticallyGameClick" />
+					<MenuItem Header="{x:Static props:Resources.strMenuItemManualAttachment}" ToolTip="{x:Static props:Resources.strToolTipMenuItemManualAttachment}" IsCheckable="True" IsChecked="{Binding Path=AutomaticallySearchForGame,Mode=OneWay,Converter={StaticResource converterBooleanInverter}}" Click="MenuItemManualAttachmentClick" />
+				</MenuItem>
+				<Separator />
+				<MenuItem Header="Exit" ToolTip="Closes the trainer." Click="MenuItemExitClick" />
+			</MenuItem>
+		</Menu>
+
+
+		<!-- GroupBox: game info -->
+		<GroupBox Grid.Row="1" Grid.Column="0" Header="{x:Static props:Resources.strGroupBoxHeaderGameInfo}">
+			<Grid>
+				<!-- Rows and columns definitions -->
+				<Grid.RowDefinitions>
+					<RowDefinition Height="auto" />
+					<RowDefinition Height="auto" />
+				</Grid.RowDefinitions>
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition Width="auto" />
+					<ColumnDefinition Width="5" />
+					<ColumnDefinition Width="*" />
+				</Grid.ColumnDefinitions>
+
+				<Label Grid.Row="0" Grid.Column="0" Content="{x:Static props:Resources.strLblGamesProcessPrompt}" Style="{StaticResource stylePromptLabel}" />
+				<DockPanel Grid.Row="0" Grid.Column="2" LastChildFill="False" VerticalAlignment="Center" MinWidth="170">
+					<Label DockPanel.Dock="Left" FontWeight="Normal" ToolTip="{x:Static props:Resources.strToolTipLabelGameProcess}">
+						<Label.Style>
+							<Style TargetType="Label">
+								<Setter Property="Content" Value="{x:Static props:Resources.strLblNotAttached}" />
+								<Style.Triggers>
+									<DataTrigger Binding="{Binding Path=GameMemoryIO.Attached}" Value="True">
+										<Setter Property="Content" Value="{Binding Path=GameMemoryIO.TargetProcess.MainModule.ModuleName}" />
+									</DataTrigger>
+								</Style.Triggers>
+							</Style>
+						</Label.Style>
+					</Label>
+					<Label DockPanel.Dock="Left" Style="{StaticResource styleVisibleWhenAttachedLabel}" Content="(" Margin="0" Padding="3,0,0,0" />
+					<Label DockPanel.Dock="Left" Style="{StaticResource styleVisibleWhenAttachedLabel}" Content="{x:Static props:Resources.strLblProcessIDPrompt}" Margin="0" Padding="0" />
+					<Label DockPanel.Dock="Left" Style="{StaticResource styleVisibleWhenAttachedLabel}" Content="{Binding Path=GameMemoryIO.TargetProcess.Id,FallbackValue={x:Static props:Resources.strNoneTag}}" Margin="0" Padding="3,0,0,0" />
+					<Label DockPanel.Dock="Left" Style="{StaticResource styleVisibleWhenAttachedLabel}" Content=")" Margin="0" Padding="0" />
+				</DockPanel>
+
+
+				<Label Grid.Row="1" Grid.Column="0" Content="{x:Static props:Resources.strLblRequiredGameVersionPrompt}" Style="{StaticResource stylePromptLabel}" />
+				<Label Grid.Row="1" Grid.Column="2" Content="{x:Static props:Resources.strLblRequiredGameVersionValue}" ToolTip="{x:Static props:Resources.strToolTipRequiredGameVersion}" HorizontalAlignment="Left" />
+			</Grid>
+		</GroupBox>
+
+
+		<!-- GroupBox: available cheats -->
+		<GroupBox Grid.Row="2" Grid.Column="0" Header="{x:Static props:Resources.strGroupBoxHeaderCheats}">
+			<StackPanel Orientation="Vertical">
+				<StackPanel.Resources>
+					<Style TargetType="Label">
+						<Setter Property="FontWeight" Value="Normal" />
+						<Setter Property="FontStyle" Value="Italic" />
+						<Setter Property="VerticalAlignment" Value="Center" />
+						<Setter Property="VerticalContentAlignment" Value="Center" />
+						<Setter Property="Padding" Value="3,0,0,0" />
+						<Setter Property="Margin" Value="0" />
+					</Style>
+					<Style TargetType="CheckBox">
+						<Setter Property="FontWeight" Value="{x:Static FontWeights.Bold}" />
+						<Setter Property="VerticalAlignment" Value="Center" />
+						<Setter Property="VerticalContentAlignment" Value="Center" />
+						<Setter Property="Padding" Value="0" />
+						<Setter Property="Margin" Value="0" />
+					</Style>
+				</StackPanel.Resources>
+                <StackPanel Orientation="Horizontal">
+                    <CheckBox Checked="CheckBoxCheatToggled" Unchecked="CheckBoxCheatToggled" Content="{x:Static props:Resources.strChkCheatPromptGodMode}" Tag="{x:Static local:ECheat.evCheatGodMode}" />
+                    <Label Content="{x:Static props:Resources.strChkCheatDescriptionGodMode}"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <CheckBox Checked="CheckBoxCheatToggled" Unchecked="CheckBoxCheatToggled" Content="{x:Static props:Resources.strChkCheatPromptInfiniteItems}" Tag="{x:Static local:ECheat.evCheatInfiniteItems}" />
+                    <Label Content="{x:Static props:Resources.strChkCheatDescriptionInfiniteItems}"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <CheckBox Checked="CheckBoxCheatToggled" Unchecked="CheckBoxCheatToggled" Content="{x:Static props:Resources.strChkCheatPromptLevelUp}" Tag="{x:Static local:ECheat.evCheatLevelUp}" />
+                    <Label Content="{x:Static props:Resources.strChkCheatDescriptionLevelUp}"/>
+                </StackPanel>
+            </StackPanel>
+		</GroupBox>
+
+
+		<!-- GroupBox: donation -->
+		<GroupBox Grid.Row="3" Grid.Column="0" Header="{x:Static props:Resources.strGroupBoxHeaderSupport}">
+			<StackPanel Orientation="Horizontal">
+				<Button Width="50" Height="50" Grid.Row="0" Grid.Column="0" Grid.RowSpan="2" Padding="2" Margin="3,3,10,3" UseLayoutRounding="False" Click="ButtonClickDonate">
+					<Button.Content>
+						<Image Name="btDonate" Stretch="UniformToFill" ToolTip="{x:Static props:Resources.strToolTipDonateButton}" Source="/media/donate.png" />
+					</Button.Content>
+				</Button>
+				<StackPanel Orientation="Vertical" VerticalAlignment="Center">
+					<Label Grid.Row="0" Grid.Column="1" Content="{x:Static props:Resources.strLblRequestForDonation}" VerticalContentAlignment="Bottom" VerticalAlignment="Bottom" Margin="0" Padding="0" />
+					<Label Grid.Row="1" Grid.Column="1" FontStyle="Italic" Content="{x:Static props:Resources.strLblClickToDonate}" VerticalAlignment="Center"  Margin="0" Padding="0" FontWeight="Normal" />
+				</StackPanel>
+			</StackPanel>
+		</GroupBox>
+	</Grid>
+</Window>

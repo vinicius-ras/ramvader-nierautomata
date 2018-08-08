@@ -1,0 +1,86 @@
+<!--
+ - Copyright (C) 2018 Vinicius Rogério Araujo Silva
+ -
+ - This file is part of RAMvader-NieRAutomata.
+ -
+ - RAMvader-NieRAutomata is free software: you can redistribute it and/or modify
+ - it under the terms of the GNU General Public License as published by
+ - the Free Software Foundation, either version 3 of the License, or
+ - (at your option) any later version.
+ -
+ - RAMvader-NieRAutomata is distributed in the hope that it will be useful,
+ - but WITHOUT ANY WARRANTY; without even the implied warranty of
+ - MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ - GNU General Public License for more details.
+ -
+ - You should have received a copy of the GNU General Public License
+ - along with RAMvader-NieRAutomata. If not, see <http://www.gnu.org/licenses/>.
+ -->
+<Window x:Class="TrainerApp.ProcessSelectionDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TrainerApp"
+		xmlns:props="clr-namespace:TrainerApp.Properties"
+		xmlns:scm="clr-namespace:System.ComponentModel;assembly=WindowsBase"
+        mc:Ignorable="d"
+        Title="{x:Static props:Resources.strProcessSelectionDialogTitle}" Height="300" Width="300"
+		DataContext="{Binding RelativeSource={RelativeSource Self}}" Closing="WindowClosing">
+	<Window.Resources>
+		<!-- Views over collections -->
+		<CollectionViewSource x:Key="collectionViewSourceAvailableProcesses" Source="{Binding Path=AvailableProcesses}" Filter="FilterProcessesList" />
+
+		<!-- Styles -->
+		<Style x:Key="styleDialogButtons" TargetType="Button">
+			<Setter Property="Margin" Value="0,3" />
+		</Style>
+		<Style TargetType="ListBox">
+			<Setter Property="Margin" Value="0,3,0,3" />
+		</Style>
+	</Window.Resources>
+    <Grid Margin="3">
+		<!-- Rows/Columns definitions -->
+		<Grid.RowDefinitions>
+			<RowDefinition Height="auto" />
+			<RowDefinition Height="*" />
+			<RowDefinition Height="auto" />
+		</Grid.RowDefinitions>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="*" />
+			<ColumnDefinition Width="5" />
+			<ColumnDefinition Width="*" />
+		</Grid.ColumnDefinitions>
+
+		<!-- Dialog controls -->
+		<TextBox Name="m_txtFilter" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" DataContext="{Binding ElementName=m_lblFilterPlaceholder}" ToolTip="{x:Static props:Resources.strToolTipProcessesFilterField}" Padding="{Binding Path=Padding}" Margin="{Binding Path=Margin}" TextChanged="TextBoxProcessesFilterTextChanged" VerticalContentAlignment="Center" />
+		<Label Name="m_lblFilterPlaceholder" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" Content="Search for process..." Foreground="{DynamicResource {x:Static SystemColors.ControlLightBrushKey}}" IsHitTestVisible="False" HorizontalAlignment="Left" VerticalAlignment="Center" />
+
+
+		<ListBox x:Name="m_lstProcesses" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3" ItemsSource="{Binding Source={StaticResource collectionViewSourceAvailableProcesses}}">
+			<ListBox.ItemTemplate>
+				<DataTemplate>
+					<StackPanel Orientation="Horizontal">
+						<TextBlock Text="[" />
+						<TextBlock Text="{Binding Path=Id,StringFormat='{}{0:D7}'}" />
+						<TextBlock Text="] " />
+						<TextBlock Text="{Binding Path=ProcessName}" />
+					</StackPanel>
+				</DataTemplate>
+			</ListBox.ItemTemplate>
+		</ListBox>
+		<Button Grid.Row="2" Grid.Column="0" Content="{x:Static props:Resources.strBtOk}" IsDefault="True" Click="ButtonOkClick">
+			<Button.Style>
+				<Style TargetType="Button" BasedOn="{StaticResource styleDialogButtons}">
+					<Setter Property="IsEnabled" Value="True" />
+					<Style.Triggers>
+						<DataTrigger Binding="{Binding ElementName=m_lstProcesses,Path=SelectedItem}" Value="{x:Null}">
+							<Setter Property="IsEnabled" Value="False" />
+						</DataTrigger>
+					</Style.Triggers>
+				</Style>
+			</Button.Style>
+		</Button>
+		<Button Style="{StaticResource styleDialogButtons}" Grid.Row="2" Grid.Column="2" Content="{x:Static props:Resources.strBtCancel}" IsCancel="True" />
+	</Grid>
+</Window>

@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2042
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrainerApp", "TrainerApp\TrainerApp.csproj", "{D9556931-C5B7-4914-B203-D694EAA5F415}"
+EndProject
+Project("{930C7802-8A8C-48F9-8165-68863BCCD9DD}") = "SetupMSI", "SetupMSI\SetupMSI.wixproj", "{6CCD6736-26A0-4E16-AEA1-FF80DDA980BB}"
+EndProject
+Project("{930C7802-8A8C-48F9-8165-68863BCCD9DD}") = "SetupBundle", "SetupBundle\SetupBundle.wixproj", "{1AC3C4C9-BB9E-4178-8D21-AA1DD8DA4590}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D9556931-C5B7-4914-B203-D694EAA5F415}.Debug|x64.ActiveCfg = Debug|x64
+		{D9556931-C5B7-4914-B203-D694EAA5F415}.Release|x64.ActiveCfg = Release|x64
+		{D9556931-C5B7-4914-B203-D694EAA5F415}.Release|x64.Build.0 = Release|x64
+		{6CCD6736-26A0-4E16-AEA1-FF80DDA980BB}.Debug|x64.ActiveCfg = Debug|x86
+		{6CCD6736-26A0-4E16-AEA1-FF80DDA980BB}.Release|x64.ActiveCfg = Release|x86
+		{1AC3C4C9-BB9E-4178-8D21-AA1DD8DA4590}.Debug|x64.ActiveCfg = Debug|x86
+		{1AC3C4C9-BB9E-4178-8D21-AA1DD8DA4590}.Release|x64.ActiveCfg = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1B87F6FE-7903-4B23-940F-1A7296E34007}
+	EndGlobalSection
+EndGlobal

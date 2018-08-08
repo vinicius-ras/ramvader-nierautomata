@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="strBtCancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="strBtClose" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="strBtOk" xml:space="preserve">
+    <value>Ok</value>
+  </data>
+  <data name="strChkCheatDescriptionGodMode" xml:space="preserve">
+    <value>enemy hits deal no damage on you.</value>
+  </data>
+  <data name="strChkCheatDescriptionInfiniteItems" xml:space="preserve">
+    <value>collected items are set to 50 units, and are never decreased.</value>
+  </data>
+  <data name="strChkCheatDescriptionLevelUp" xml:space="preserve">
+    <value>every enemy killed adds +100k EXP to the player.</value>
+  </data>
+  <data name="strChkCheatPromptGodMode" xml:space="preserve">
+    <value>God Mode:</value>
+  </data>
+  <data name="strChkCheatPromptInfiniteItems" xml:space="preserve">
+    <value>Infinite Items:</value>
+  </data>
+  <data name="strChkCheatPromptLevelUp" xml:space="preserve">
+    <value>Easy Level-Up:</value>
+  </data>
+  <data name="strGroupBoxHeaderCheats" xml:space="preserve">
+    <value>Available hacks</value>
+  </data>
+  <data name="strGroupBoxHeaderGameInfo" xml:space="preserve">
+    <value>Game info</value>
+  </data>
+  <data name="strGroupBoxHeaderSupport" xml:space="preserve">
+    <value>Support us!</value>
+  </data>
+  <data name="strHelpContentsHTML" xml:space="preserve">
+    <value>&lt;h1&gt;How do I use the trainer?&lt;/h1&gt;
+&lt;p&gt;First, you should run the trainer and enable and configure all the cheats you want to enable. The available cheats are at the "Available hacks" area of the trainer's main window.&lt;/p&gt;
+
+&lt;p&gt;After configuring the cheats the way you want, just run the game. The trainer will automatically detect the game and apply the cheats you have configured. You may have to wait about 3 seconds for this process to happen.&lt;/p&gt;
+
+&lt;p&gt;Once the trainer is running and you are in the game, you can press &lt;b&gt;ALT+TAB&lt;/b&gt; to go back to the trainer and you can reconfigure the trainer while the game is running &amp;mdash; there's no problem in doing that, and the trainer will adjust the hack configurations inside the game accordingly.&lt;/p&gt;
+
+&lt;h2&gt;In case of errors...&lt;/h2&gt;
+&lt;p&gt;If nothing happens, or if you receive an error, first you need to check if &lt;b&gt;both the game and the trainer&lt;/b&gt; are running. If so, check if you have the &lt;b&gt;right version of the game&lt;/b&gt; that the trainer is compatible with. The game's compatible version appear after the &lt;b&gt;Required game version&lt;/b&gt; label, in the trainer's main window (in the &lt;b&gt;Game info&lt;/b&gt; area). The trainer will probably &lt;b&gt;NOT&lt;/b&gt; work with another version of the game: it must be the specific version that is written on the trainer's interface!&lt;/p&gt;
+
+&lt;p&gt;In case there's any error, you might also try to run the trainer with &lt;b&gt;elevated privileges&lt;/b&gt;. Find the trainer's program, right-click it and choose &lt;b&gt;Run as administrator&lt;/b&gt; to try running the trainer with elevated privileges.&lt;/p&gt;
+
+&lt;p&gt;As a last resort, if the trainer fails to automatically find the running game, you might want to try to select the game's process &lt;b&gt;manually&lt;/b&gt;. This process is &lt;b&gt;not recommended&lt;/b&gt;, as it might cause the game to crash and/or data to be lost. If you are absolutely sure you want to do a &lt;b&gt;manual selection&lt;/b&gt;, you might access that option through the menu on the trainer's main window: &lt;b&gt;More options... &amp;gt; Select game process manually&lt;/b&gt;. This will open a window that lists all the processes running on your system, where you can try to find the target game's process.&lt;/p&gt;
+
+
+&lt;h1&gt;Getting help&lt;/h1&gt;
+&lt;p&gt;Here are some options on how you can get help for using this trainer.&lt;/p&gt;
+&lt;p&gt;&lt;b&gt;Tooltips:&lt;/b&gt; in the trainer's interface, put your mouse cursor over the things you are confused about. A tooltip will appear describing the item your mouse is over.&lt;/p&gt;
+&lt;p&gt;&lt;b&gt;Visit the project's website:&lt;/b&gt; you can try looking for help on the project's GitHub page. To see the list of official trainer projects built with the RAMvader library, click on &lt;a href="https://github.com/vinicius-ras?tab=repositories"&gt;this link&lt;/a&gt;.&lt;/p&gt;
+
+
+&lt;h1&gt;Help the developer =)&lt;/h1&gt;
+&lt;p&gt;To show your support for the developer, or maybe if you wish to keep the trainers/projects updated or want new trainers/projects to be released, consider &lt;b&gt;donating to help the development&lt;/b&gt;!&lt;/p&gt;
+
+&lt;p&gt;There's a piggy bank button at the end of the trainer's main screen for receiving donations. Any amount would be greatly appreciated! =)&lt;/p&gt;
+
+&lt;p&gt;Thank you!&lt;/p&gt;</value>
+  </data>
+  <data name="strHelpDialogTitle" xml:space="preserve">
+    <value>Help contents</value>
+  </data>
+  <data name="strLblClickToDonate" xml:space="preserve">
+    <value>(Click to donate via PayPal).</value>
+  </data>
+  <data name="strLblGamesProcessPrompt" xml:space="preserve">
+    <value>Game's process:</value>
+  </data>
+  <data name="strLblNotAttached" xml:space="preserve">
+    <value>Game not detected... Please, run the game!</value>
+  </data>
+  <data name="strLblProcessIDPrompt" xml:space="preserve">
+    <value>PID:</value>
+  </data>
+  <data name="strLblRequestForDonation" xml:space="preserve">
+    <value>Please, consider supporting the developer!</value>
+  </data>
+  <data name="strLblRequiredGameVersionPrompt" xml:space="preserve">
+    <value>Required game version:</value>
+  </data>
+  <data name="strLblRequiredGameVersionValue" xml:space="preserve">
+    <value>Steam version (tested on July 08, 2018)</value>
+  </data>
+  <data name="strMainWindowTitle" xml:space="preserve">
+    <value>RAMvader-NieRAutomata by Vinicius.RAS</value>
+  </data>
+  <data name="strMenuItemExit" xml:space="preserve">
+    <value>Exit</value>
+  </data>
+  <data name="strMenuItemGameSearchOptions" xml:space="preserve">
+    <value>Game search options...</value>
+  </data>
+  <data name="strMenuItemHelp" xml:space="preserve">
+    <value>I need help!</value>
+  </data>
+  <data name="strMenuItemManualAttachment" xml:space="preserve">
+    <value>Select game process manually</value>
+  </data>
+  <data name="strMenuItemMoreOptions" xml:space="preserve">
+    <value>More options...</value>
+  </data>
+  <data name="strMenuItemSearchAutomatically" xml:space="preserve">
+    <value>Search for the game's process automatically</value>
+  </data>
+  <data name="strMsgConfirmDetachment" xml:space="preserve">
+    <value>The trainer is already attached to the game's process. Proceeding with this action will detach the trainer from the game's process.
+
+Are you sure you want to detach the trainer from the game's process?</value>
+  </data>
+  <data name="strMsgConfirmDetachmentCaption" xml:space="preserve">
+    <value>Confirm detachment?</value>
+  </data>
+  <data name="strMsgFailedToAttach" xml:space="preserve">
+    <value>Failed to attach to the game's process!
+Do you want the trainer to continue trying to automatically attach to the game?</value>
+  </data>
+  <data name="strMsgFailedToAttachCaption" xml:space="preserve">
+    <value>Failed to attach</value>
+  </data>
+  <data name="strNoneTag" xml:space="preserve">
+    <value>&lt;NONE&gt;</value>
+  </data>
+  <data name="strProcessSelectionDialogTitle" xml:space="preserve">
+    <value>Select the game's process</value>
+  </data>
+  <data name="strToolTipDonateButton" xml:space="preserve">
+    <value>If you wish to support the developer, please click this button to help by making a donation.
+Your donation allows the developer to keep the projects updated and to make new ones.
+
+This button opens a PayPal donation web page.</value>
+  </data>
+  <data name="strToolTipLabelGameProcess" xml:space="preserve">
+    <value>Shows the process where the game has been detected.
+When you run the game, the trainer will automatically detect it and display its process here.
+
+Although this is not recommended, you can manually select the game's process by going to the menu:
+More options &gt; Select game process manually</value>
+  </data>
+  <data name="strToolTipMenuItemExit" xml:space="preserve">
+    <value>Closes the trainer.</value>
+  </data>
+  <data name="strToolTipMenuItemHelp" xml:space="preserve">
+    <value>Click for information on how to use the trainer.</value>
+  </data>
+  <data name="strToolTipMenuItemManualAttachment" xml:space="preserve">
+    <value>Stops trainer's "automatic detection" of the game, and lets you manually select the game's process.
+This is for advanced users only, and is NOT recommended.</value>
+  </data>
+  <data name="strToolTipProcessesFilterField" xml:space="preserve">
+    <value>Type here to filter the list of available processes below</value>
+  </data>
+  <data name="strToolTipRequiredGameVersion" xml:space="preserve">
+    <value>The version of the game this trainer is compatible with.
+If your game has a different version, this trainer will probably NOT work with it.</value>
+  </data>
+  <data name="strToolTipRestartLookingForGame" xml:space="preserve">
+    <value>If you have stoped the trainer from looking for the game, click here to make it restart the automatic searching.</value>
+  </data>
+</root>
