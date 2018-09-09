@@ -61,7 +61,7 @@ namespace TrainerApp
 
         #region PUBLIC PROPERTIES
         /// <summary>An object used for performing I/O operations on the game process' memory. </summary>
-        public RAMvaderTarget GameMemoryIO { get; private set; }
+        public Target GameMemoryIO { get; private set; }
         /// <summary>An object used for injecting and managing code caves and arbitrary variables into the
         /// game process' memory.</summary>
         public Injector<ECheat, ECodeCave, EVariable> GameMemoryInjector { get; private set; }
@@ -71,14 +71,11 @@ namespace TrainerApp
         ///       Changing this flag will start or stop the timer which searches for the game's process accordingly.
         ///       This property implements the "Property Changed" notifications, so it can be safely used in WPF Bindings.
         ///    </para>
-        ///    <para>IMPORTANT: To enable or disable the search timer, use <see cref="xxxx"/>.</para>
+        ///    <para>IMPORTANT: To enable or disable the search timer, use <see cref="SetAutomaticSearchForGameProcessEnabled(bool)"/>.</para>
         /// </summary>
         public bool AutomaticallySearchForGame
         {
-            get
-            {
-                return m_automaticallySearchForGame;
-            }
+            get => m_automaticallySearchForGame;
             set
             {
                 // Update the property
@@ -238,7 +235,7 @@ namespace TrainerApp
                     GameMemoryInjector.Inject(new AbsoluteMemoryAddress(mainModuleAddress+0xD3A1DD));
                     this.AfterInjection();
                 }
-                catch (Win32Exception ex)
+                catch (Win32Exception)
                 {
 #if DEBUG
                     Debugger.Break();
@@ -365,7 +362,7 @@ namespace TrainerApp
         public MainWindow()
         {
             // Initialize objects which will perform operations on the game's memory
-            GameMemoryIO = new RAMvaderTarget();
+            GameMemoryIO = new Target();
 
             GameMemoryInjector = new Injector<ECheat, ECodeCave, EVariable>();
             GameMemoryInjector.SetTargetProcess(GameMemoryIO);

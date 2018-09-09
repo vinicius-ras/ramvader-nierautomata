@@ -41,8 +41,8 @@
 
 		<!-- Configure the files and directories that will be installed. -->
 		<Directory Id="TARGETDIR" Name="SourceDir">
-			<!-- Files to be installed at Program Files (x86). -->
-			<Directory Id="ProgramFilesFolder">
+			<!-- Files to be installed at Program Files (x64). -->
+			<Directory Id="ProgramFiles64Folder">
 				<Directory Id="APPLICATIONROOTDIRECTORY" Name="RAMvader-NieRAutomata">
 					<Component Id="RAMvaderTrainer.exe" Guid="8DD224B9-1546-44C6-9625-CFF7CF75ADAB">
 						<File Id="RAMvaderTrainer.exe" Source="$(var.TrainerApp.TargetPath)" Checksum="yes" />
