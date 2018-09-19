@@ -18,72 +18,72 @@
  - along with RAMvader-NieRAutomata. If not, see <http://www.gnu.org/licenses/>.
  -->
 <Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
-	<!-- This file will be generating the MSI file which installs RAMvader-NieRAutomata into the user's machine. -->
-	<Product Id="3F5F43CC-8BE7-4CDA-A296-62315AD708C0" UpgradeCode="C0928225-F890-4F69-BDC9-A3A0AACC88A9"
-			 Name="RAMvader-NieRAutomata Trainer" Manufacturer="Vinicius Rogério Araujo Silva" Language="1033" Codepage="1252"
-			 Version="1.0.0">
-		<!-- Package, upgrade and downgrade information. -->
-		<Package InstallerVersion="200" Compressed="yes" InstallScope="perMachine"
-				 Keywords="Installer"
-				 Manufacturer="Vinicius Rogério Araujo Silva" Languages="1033" SummaryCodepage="1252"
+  <!-- This file will be generating the MSI file which installs RAMvader-NieRAutomata into the user's machine. -->
+  <Product Id="*" Language="1033" Codepage="1252"
+           UpgradeCode="C0928225-F890-4F69-BDC9-A3A0AACC88A9"
+           Name="RAMvader-NieRAutomata Trainer"
+           Manufacturer="Vinicius Rogério Araujo Silva"
+           Version="!(bind.FileVersion.TrainerExecutableFile)">
+    <!-- Package, upgrade and downgrade information. -->
+    <Package InstallerVersion="200" Compressed="yes" InstallScope="perMachine" Keywords="Installer" Languages="1033" SummaryCodepage="1252"
+				 Manufacturer="Vinicius Rogério Araujo Silva"
 				 Description="RAMvader-NieRAutomata is a trainer by Vinicius.RAS for the game NieR:Automata." />
 
-		<MajorUpgrade AllowDowngrades="no" DowngradeErrorMessage="A newer version of RAMvader-NieRAutomata is already installed." />
+    <MajorUpgrade Disallow="yes" AllowSameVersionUpgrades="yes"
+                  DowngradeErrorMessage="Please, uninstall previously installed versions of [ProductName] before executing this installation."
+                  DisallowUpgradeErrorMessage="Please, uninstall previously installed versions of [ProductName] before executing this installation." />
 
-		<!-- Configure media where the files will be stored. -->
-		<Media Id="1" Cabinet="SetupFiles.cab" EmbedCab="yes" />
+    <!-- Configure media where the files will be stored. -->
+    <Media Id="1" Cabinet="SetupFiles.cab" EmbedCab="yes" />
 
-		<!-- Add the icon(s) we'll be using... -->
-		<Icon Id="ProjectIcon" SourceFile="$(var.TrainerApp.ProjectDir)media\icon.ico" />
+    <!-- Add the icon(s) we'll be using... -->
+    <Icon Id="ProjectIcon" SourceFile="$(var.TrainerApp.ProjectDir)media\icon.ico" />
 
-		<!-- Configure app's icon to appear in Windows' "Add/Remove Programs" -->
-		<Property Id="ARPPRODUCTICON" Value="ProjectIcon" />
+    <!-- Configure app's icon to appear in Windows' "Add/Remove Programs" -->
+    <Property Id="ARPPRODUCTICON" Value="ProjectIcon" />
 
-		<!-- Configure the files and directories that will be installed. -->
-		<Directory Id="TARGETDIR" Name="SourceDir">
-			<!-- Files to be installed at Program Files (x64). -->
-			<Directory Id="ProgramFiles64Folder">
-				<Directory Id="APPLICATIONROOTDIRECTORY" Name="RAMvader-NieRAutomata">
-					<Component Id="RAMvaderTrainer.exe" Guid="8DD224B9-1546-44C6-9625-CFF7CF75ADAB">
-						<File Id="RAMvaderTrainer.exe" Source="$(var.TrainerApp.TargetPath)" Checksum="yes" />
-					</Component>
+    <!-- Configure the files and directories that will be installed. -->
+    <Directory Id="TARGETDIR" Name="SourceDir">
+      <!-- Files to be installed at Program Files (x64). -->
+      <Directory Id="ProgramFiles64Folder">
+        <Directory Id="TRAINER_INSTALL_DIR" Name="RAMvader-NieRAutomata">
+          <Component Id="TrainerExecutableComponent" Guid="8DD224B9-1546-44C6-9625-CFF7CF75ADAB">
+            <File Id="TrainerExecutableFile" Source="$(var.TrainerApp.TargetPath)" Checksum="yes" />
+          </Component>
 
-					<Component Id="RAMvader.dll" Guid="E0FFB62D-BF03-4FCA-B40B-E60F9E14B1F9">
-						<File Source="$(var.TrainerApp.TargetDir)RAMvader.dll" Checksum="yes" />
-					</Component>
-				</Directory>
-			</Directory>
+          <Component Id="TrainerRamvaderDllComponent" Guid="E0FFB62D-BF03-4FCA-B40B-E60F9E14B1F9">
+            <File Source="$(var.TrainerApp.TargetDir)RAMvader.dll" Checksum="yes" />
+          </Component>
+        </Directory>
+      </Directory>
 
-			<!-- Directory table entries to create shortcuts on the Program Menu folder (Windows' "Start menu") -->
-			<Directory Id="ProgramMenuFolder">
-				<Component Id="ProgramMenuAppShortcut" Guid="A7BF8C63-A11D-4E64-B774-7C459F00F6E3">
-					<!-- Shortcut to run the trainer from the Program Menu. -->
-					<Shortcut Id="TrainerProgramMenuShortcut" Target="[#RAMvaderTrainer.exe]"
-							  Name="RAMvader-NieRAutomata Trainer" Description="Runs RAMvader-NieRAutomata: a trainer for the game NieR:Automata." />
+      <!-- Directory table entries to create shortcuts on the Program Menu folder (Windows' "Start menu") -->
+      <Directory Id="ProgramMenuFolder">
+        <Component Id="ProgramMenuAppShortcut" Guid="A7BF8C63-A11D-4E64-B774-7C459F00F6E3">
+          <!-- Shortcut to run the trainer from the Program Menu. -->
+          <Shortcut Id="TrainerProgramMenuShortcut" Target="[#TrainerExecutableFile]"
+							  Name="RAMvader-NieRAutomata Trainer"
+							  Description="Runs RAMvader-NieRAutomata: a trainer for the game NieR:Automata." />
 
-					<!-- Allows removal of shortcuts when the trainer gets uninstalled. -->
-					<RegistryValue Root="HKCU" Key="Software\[Manufacturer]\[ProductName]" Name="installed" Type="integer" Value="1" KeyPath="yes" />
-				</Component>
-			</Directory>
-		</Directory>
+          <!-- Allows removal of shortcuts when the trainer gets uninstalled. -->
+          <RegistryValue Root="HKCU" Key="Software\[Manufacturer]\[ProductName]" Name="installed" Type="integer" Value="1" KeyPath="yes" />
+        </Component>
+      </Directory>
+    </Directory>
 
-		<!-- Finally, make the feature available for installation. -->
-		<Feature Id="TrainerMainFiles" Level="1"
-				 Absent="disallow" AllowAdvertise="no"
-				 ConfigurableDirectory="APPLICATIONROOTDIRECTORY"
-				 Title="RAMvader-NieRAutomata's main files" Description="Main files which allow the RAMvader-NieRAutomata trainer to be executed."
-				 Display="expand">
-			<ComponentRef Id="RAMvaderTrainer.exe" />
-			<ComponentRef Id="ProgramMenuAppShortcut" />
-			<ComponentRef Id="RAMvader.dll" />
-		</Feature>
+    <!-- Finally, make the feature available for installation. -->
+    <Feature Id="TrainerMainFiles" Absent="disallow" AllowAdvertise="no" Display="expand"
+				 Title="RAMvader-NieRAutomata's main files" Description="Main files which allow the RAMvader-NieRAutomata trainer to be executed." >
+      <ComponentRef Id="TrainerExecutableComponent" />
+      <ComponentRef Id="ProgramMenuAppShortcut" />
+      <ComponentRef Id="TrainerRamvaderDllComponent" />
+    </Feature>
 
-		<!-- Configure the installer's User Interface. -->
-		<UIRef Id="WixUI_InstallDir" />
-		<UIRef Id="WixUI_ErrorProgressText" />
-		<Property Id="WIXUI_INSTALLDIR" Value="APPLICATIONROOTDIRECTORY" />
+    <!-- Configure the installer's User Interface. -->
+    <UIRef Id="WixUI_InstallDir" />
+    <Property Id="WIXUI_INSTALLDIR" Value="TRAINER_INSTALL_DIR" />
 
-		<WixVariable Id="WixUILicenseRtf" Value="$(var.TrainerApp.ProjectDir)docs\License.rtf" />
+    <WixVariable Id="WixUILicenseRtf" Value="$(var.TrainerApp.ProjectDir)docs\License.rtf" />
 
-	</Product>
+  </Product>
 </Wix>

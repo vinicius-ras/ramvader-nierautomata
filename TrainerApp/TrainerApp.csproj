@@ -91,8 +91,6 @@
     </Page>
     <Resource Include="media\donate.png" />
     <Resource Include="media\icon.ico" />
-    <None Include="media\donate.svg" />
-    <None Include="media\icon.svg" />
     <Compile Include="Windows\ProcessSelectionDialog.xaml.cs">
       <DependentUpon>ProcessSelectionDialog.xaml</DependentUpon>
     </Compile>
