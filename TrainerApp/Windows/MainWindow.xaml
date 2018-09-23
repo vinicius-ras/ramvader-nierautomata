@@ -164,6 +164,10 @@
                     <CheckBox Checked="CheckBoxCheatToggled" Unchecked="CheckBoxCheatToggled" Content="{x:Static props:Resources.strChkCheatPromptLevelUp}" Tag="{x:Static local:ECheat.evCheatLevelUp}" />
                     <Label Content="{x:Static props:Resources.strChkCheatDescriptionLevelUp}"/>
                 </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <CheckBox Checked="CheckBoxCheatToggled" Unchecked="CheckBoxCheatToggled" Content="{x:Static props:Resources.strChkCheatPromptOneHitKills}" Tag="{x:Static local:ECheat.evCheatOneHitKills}" />
+                    <Label Content="{x:Static props:Resources.strChkCheatDescriptionOneHitKills}"/>
+                </StackPanel>
             </StackPanel>
 		</GroupBox>
 

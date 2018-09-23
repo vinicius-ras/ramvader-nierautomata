@@ -32,6 +32,8 @@ namespace TrainerApp
         evCheatInfiniteItems,
         /// <summary>Identifier for the "Level Up" cheat.</summary>
         evCheatLevelUp,
+        /// <summary>Identifier for the "One Hit Kills" cheat.</summary>
+        evCheatOneHitKills,
     }
 
 
@@ -44,9 +46,11 @@ namespace TrainerApp
 	{
 		/// <summary>Identifier for the "God Mode" code cave.</summary>
 		evCodeCaveInfiniteItems,
-		/// <summary>Identifier for the "Level Up" example code cave.</summary>
-		evCodeCaveLevelUp,
-	}
+        /// <summary>Identifier for the "Level Up" example code cave.</summary>
+        evCodeCaveLevelUp,
+        /// <summary>Identifier for the "One Hit Kills" example code cave.</summary>
+        evCodeCaveOneHitKills,
+    }
 
 
 

@@ -115,6 +115,15 @@ namespace TrainerApp.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Kill enemies and bosses with a single hit..
+        /// </summary>
+        public static string strChkCheatDescriptionOneHitKills {
+            get {
+                return ResourceManager.GetString("strChkCheatDescriptionOneHitKills", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to God Mode:.
         /// </summary>
         public static string strChkCheatPromptGodMode {
@@ -138,6 +147,15 @@ namespace TrainerApp.Properties {
         public static string strChkCheatPromptLevelUp {
             get {
                 return ResourceManager.GetString("strChkCheatPromptLevelUp", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to One Hit Kills:.
+        /// </summary>
+        public static string strChkCheatPromptOneHitKills {
+            get {
+                return ResourceManager.GetString("strChkCheatPromptOneHitKills", resourceCulture);
             }
         }
         

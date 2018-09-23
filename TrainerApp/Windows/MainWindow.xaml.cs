@@ -118,6 +118,10 @@ namespace TrainerApp
                     .Bytes(0x51, 0x81, 0xC1, 0xA0, 0x86, 0x01, 0x00, 0x89, 0x0D, 0x6E, 0xA4, 0xC4, 0x00, 0x59, 0xE9, 0xAD, 0xBF, 0x85, 0xFF)
                     .Build()
             );
+            GameMemoryInjector.SetCodeCaveDefinition(ECodeCave.evCodeCaveOneHitKills,
+                GameMemoryInjector.NewCodeCave()
+                    .Bytes(0x56, 0xC1, 0xE6, 0x10, 0x29, 0xB7, 0x58, 0x08, 0x00, 0x00, 0x5E, 0xC3)
+                    .Build());
         }
 
 
@@ -159,6 +163,7 @@ namespace TrainerApp
             GameMemoryInjector.AddMemoryAlteration(ECheat.evCheatGodMode, new MemoryAlterationNOP(GameMemoryIO, new AbsoluteMemoryAddress(mainModuleAddress + 0x1FA5B1), 6));
             GameMemoryInjector.AddMemoryAlteration(ECheat.evCheatInfiniteItems, new MemoryAlterationPoke(GameMemoryIO, new AbsoluteMemoryAddress(mainModuleAddress + 0x5DCFF6), new byte[] { 0xE9, 0xE2, 0xD1, 0x75, 0x00, 0x90, 0x90, 0x90 }));
             GameMemoryInjector.AddMemoryAlteration(ECheat.evCheatLevelUp, new MemoryAlterationPoke(GameMemoryIO, new AbsoluteMemoryAddress(mainModuleAddress + 0x5961AF), new byte[] { 0xE9, 0x41, 0x40, 0x7A, 0x00, 0x90 }));
+            GameMemoryInjector.AddMemoryAlteration(ECheat.evCheatOneHitKills, new MemoryAlterationX86BranchInstruction(GameMemoryIO, new AbsoluteMemoryAddress(mainModuleAddress + 0x34748A6), GameMemoryInjector.GetInjectedCodeCaveAddress(ECodeCave.evCodeCaveOneHitKills), EX86BranchInstructionType.evCallNearRelative32, 6));
         }
 
 

@@ -135,6 +135,9 @@
   <data name="strChkCheatDescriptionLevelUp" xml:space="preserve">
     <value>every enemy killed adds +100k EXP to the player.</value>
   </data>
+  <data name="strChkCheatDescriptionOneHitKills" xml:space="preserve">
+    <value>Kill enemies and bosses with a single hit.</value>
+  </data>
   <data name="strChkCheatPromptGodMode" xml:space="preserve">
     <value>God Mode:</value>
   </data>
@@ -143,6 +146,9 @@
   </data>
   <data name="strChkCheatPromptLevelUp" xml:space="preserve">
     <value>Easy Level-Up:</value>
+  </data>
+  <data name="strChkCheatPromptOneHitKills" xml:space="preserve">
+    <value>One Hit Kills:</value>
   </data>
   <data name="strGroupBoxHeaderCheats" xml:space="preserve">
     <value>Available hacks</value>
