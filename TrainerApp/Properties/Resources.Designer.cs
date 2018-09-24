@@ -124,11 +124,20 @@ namespace TrainerApp.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Kill animals (mooses and boars) with a single hit..
+        /// </summary>
+        public static string strChkCheatDescriptionOneHitKillsAnimals {
+            get {
+                return ResourceManager.GetString("strChkCheatDescriptionOneHitKillsAnimals", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Kill enemies and bosses with a single hit..
         /// </summary>
-        public static string strChkCheatDescriptionOneHitKills {
+        public static string strChkCheatDescriptionOneHitKillsEnemies {
             get {
-                return ResourceManager.GetString("strChkCheatDescriptionOneHitKills", resourceCulture);
+                return ResourceManager.GetString("strChkCheatDescriptionOneHitKillsEnemies", resourceCulture);
             }
         }
         
@@ -169,11 +178,20 @@ namespace TrainerApp.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to One Hit Kills:.
+        ///   Looks up a localized string similar to One Hit Kills (animals):.
         /// </summary>
-        public static string strChkCheatPromptOneHitKills {
+        public static string strChkCheatPromptOneHitKillsAnimals {
             get {
-                return ResourceManager.GetString("strChkCheatPromptOneHitKills", resourceCulture);
+                return ResourceManager.GetString("strChkCheatPromptOneHitKillsAnimals", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to One Hit Kills (enemies):.
+        /// </summary>
+        public static string strChkCheatPromptOneHitKillsEnemies {
+            get {
+                return ResourceManager.GetString("strChkCheatPromptOneHitKillsEnemies", resourceCulture);
             }
         }
         

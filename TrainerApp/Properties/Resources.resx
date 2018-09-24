@@ -138,7 +138,10 @@
   <data name="strChkCheatDescriptionLevelUp" xml:space="preserve">
     <value>every enemy killed adds +100k EXP to the player.</value>
   </data>
-  <data name="strChkCheatDescriptionOneHitKills" xml:space="preserve">
+  <data name="strChkCheatDescriptionOneHitKillsAnimals" xml:space="preserve">
+    <value>Kill animals (mooses and boars) with a single hit.</value>
+  </data>
+  <data name="strChkCheatDescriptionOneHitKillsEnemies" xml:space="preserve">
     <value>Kill enemies and bosses with a single hit.</value>
   </data>
   <data name="strChkCheatPromptEasyMoney" xml:space="preserve">
@@ -153,8 +156,11 @@
   <data name="strChkCheatPromptLevelUp" xml:space="preserve">
     <value>Easy Level-Up:</value>
   </data>
-  <data name="strChkCheatPromptOneHitKills" xml:space="preserve">
-    <value>One Hit Kills:</value>
+  <data name="strChkCheatPromptOneHitKillsAnimals" xml:space="preserve">
+    <value>One Hit Kills (animals):</value>
+  </data>
+  <data name="strChkCheatPromptOneHitKillsEnemies" xml:space="preserve">
+    <value>One Hit Kills (enemies):</value>
   </data>
   <data name="strGroupBoxHeaderCheats" xml:space="preserve">
     <value>Available hacks</value>

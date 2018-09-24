@@ -165,8 +165,12 @@
                     <Label Content="{x:Static props:Resources.strChkCheatDescriptionLevelUp}"/>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal">
-                    <CheckBox Checked="CheckBoxCheatToggled" Unchecked="CheckBoxCheatToggled" Content="{x:Static props:Resources.strChkCheatPromptOneHitKills}" Tag="{x:Static local:ECheat.evCheatOneHitKills}" />
-                    <Label Content="{x:Static props:Resources.strChkCheatDescriptionOneHitKills}"/>
+                    <CheckBox Checked="CheckBoxCheatToggled" Unchecked="CheckBoxCheatToggled" Content="{x:Static props:Resources.strChkCheatPromptOneHitKillsEnemies}" Tag="{x:Static local:ECheat.evCheatOneHitKillsEnemies}" />
+                    <Label Content="{x:Static props:Resources.strChkCheatDescriptionOneHitKillsEnemies}"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <CheckBox Checked="CheckBoxCheatToggled" Unchecked="CheckBoxCheatToggled" Content="{x:Static props:Resources.strChkCheatPromptOneHitKillsAnimals}" Tag="{x:Static local:ECheat.evCheatOneHitKillsAnimals}" />
+                    <Label Content="{x:Static props:Resources.strChkCheatDescriptionOneHitKillsAnimals}"/>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal">
                     <CheckBox Checked="CheckBoxCheatToggled" Unchecked="CheckBoxCheatToggled" Content="{x:Static props:Resources.strChkCheatPromptEasyMoney}" Tag="{x:Static local:ECheat.evCheatEasyMoney}" />

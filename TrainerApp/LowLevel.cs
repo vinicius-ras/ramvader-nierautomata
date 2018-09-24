@@ -32,8 +32,10 @@ namespace TrainerApp
         evCheatInfiniteItems,
         /// <summary>Identifier for the "Level Up" cheat.</summary>
         evCheatLevelUp,
-        /// <summary>Identifier for the "One Hit Kills" cheat.</summary>
-        evCheatOneHitKills,
+        /// <summary>Identifier for the "One Hit Kills (Enemies)" cheat.</summary>
+        evCheatOneHitKillsEnemies,
+        /// <summary>Identifier for the "One Hit Kills (Animals)" cheat.</summary>
+        evCheatOneHitKillsAnimals,
         /// <summary>Identifier for the "Easy Money" cheat.</summary>
         evCheatEasyMoney,
     }
@@ -50,8 +52,10 @@ namespace TrainerApp
 		evCodeCaveInfiniteItems,
         /// <summary>Identifier for the "Level Up" code cave.</summary>
         evCodeCaveLevelUp,
-        /// <summary>Identifier for the "One Hit Kills" code cave.</summary>
-        evCodeCaveOneHitKills,
+        /// <summary>Identifier for the "One Hit Kills (Enemies)" code cave.</summary>
+        evCodeCaveOneHitKillsEnemies,
+        /// <summary>Identifier for the "One Hit Kills (Animals)" code cave.</summary>
+        evCodeCaveOneHitKillsAnimals,
         /// <summary>Identifier for the "Easy Money" code cave.</summary>
         evCodeCaveEasyMoney,
     }
