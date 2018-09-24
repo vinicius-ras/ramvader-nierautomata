@@ -168,6 +168,10 @@
                     <CheckBox Checked="CheckBoxCheatToggled" Unchecked="CheckBoxCheatToggled" Content="{x:Static props:Resources.strChkCheatPromptOneHitKills}" Tag="{x:Static local:ECheat.evCheatOneHitKills}" />
                     <Label Content="{x:Static props:Resources.strChkCheatDescriptionOneHitKills}"/>
                 </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <CheckBox Checked="CheckBoxCheatToggled" Unchecked="CheckBoxCheatToggled" Content="{x:Static props:Resources.strChkCheatPromptEasyMoney}" Tag="{x:Static local:ECheat.evCheatEasyMoney}" />
+                    <Label Content="{x:Static props:Resources.strChkCheatDescriptionEasyMoney}"/>
+                </StackPanel>
             </StackPanel>
 		</GroupBox>
 

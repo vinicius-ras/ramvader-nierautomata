@@ -126,6 +126,9 @@
   <data name="strBtOk" xml:space="preserve">
     <value>Ok</value>
   </data>
+  <data name="strChkCheatDescriptionEasyMoney" xml:space="preserve">
+    <value>Collected money pieces are worth much more cash.</value>
+  </data>
   <data name="strChkCheatDescriptionGodMode" xml:space="preserve">
     <value>enemy hits deal no damage on you.</value>
   </data>
@@ -137,6 +140,9 @@
   </data>
   <data name="strChkCheatDescriptionOneHitKills" xml:space="preserve">
     <value>Kill enemies and bosses with a single hit.</value>
+  </data>
+  <data name="strChkCheatPromptEasyMoney" xml:space="preserve">
+    <value>Easy Money:</value>
   </data>
   <data name="strChkCheatPromptGodMode" xml:space="preserve">
     <value>God Mode:</value>

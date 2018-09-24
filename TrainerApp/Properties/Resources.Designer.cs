@@ -88,6 +88,15 @@ namespace TrainerApp.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Collected money pieces are worth much more cash..
+        /// </summary>
+        public static string strChkCheatDescriptionEasyMoney {
+            get {
+                return ResourceManager.GetString("strChkCheatDescriptionEasyMoney", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to enemy hits deal no damage on you..
         /// </summary>
         public static string strChkCheatDescriptionGodMode {
@@ -120,6 +129,15 @@ namespace TrainerApp.Properties {
         public static string strChkCheatDescriptionOneHitKills {
             get {
                 return ResourceManager.GetString("strChkCheatDescriptionOneHitKills", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Easy Money:.
+        /// </summary>
+        public static string strChkCheatPromptEasyMoney {
+            get {
+                return ResourceManager.GetString("strChkCheatPromptEasyMoney", resourceCulture);
             }
         }
         

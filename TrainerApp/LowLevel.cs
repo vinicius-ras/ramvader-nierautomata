@@ -34,6 +34,8 @@ namespace TrainerApp
         evCheatLevelUp,
         /// <summary>Identifier for the "One Hit Kills" cheat.</summary>
         evCheatOneHitKills,
+        /// <summary>Identifier for the "Easy Money" cheat.</summary>
+        evCheatEasyMoney,
     }
 
 
@@ -46,19 +48,21 @@ namespace TrainerApp
 	{
 		/// <summary>Identifier for the "God Mode" code cave.</summary>
 		evCodeCaveInfiniteItems,
-        /// <summary>Identifier for the "Level Up" example code cave.</summary>
+        /// <summary>Identifier for the "Level Up" code cave.</summary>
         evCodeCaveLevelUp,
-        /// <summary>Identifier for the "One Hit Kills" example code cave.</summary>
+        /// <summary>Identifier for the "One Hit Kills" code cave.</summary>
         evCodeCaveOneHitKills,
+        /// <summary>Identifier for the "Easy Money" code cave.</summary>
+        evCodeCaveEasyMoney,
     }
 
 
 
 
 
-	/// <summary>Identifiers for all variables injected into the game process' memory space,
-	/// once the trainer gets attached to the game.</summary>
-	public enum EVariable
+    /// <summary>Identifiers for all variables injected into the game process' memory space,
+    /// once the trainer gets attached to the game.</summary>
+    public enum EVariable
 	{
 	}
 }
