@@ -130,6 +130,10 @@ namespace TrainerApp
                 GameMemoryInjector.NewCodeCave()
                     .Bytes(0x56, 0xC1, 0xE6, 0x09, 0x01, 0x30, 0x5E, 0x48, 0xA1, 0x88, 0x61, 0x0F, 0x41, 0x01, 0x00, 0x00, 0x00, 0xC3)
                     .Build());
+            GameMemoryInjector.SetCodeCaveDefinition(ECodeCave.evCodeCaveInstantSkillRecharge,
+                GameMemoryInjector.NewCodeCave()
+                    .Bytes(0x51, 0x48, 0x31, 0xC9, 0x48, 0x89, 0x8C, 0xC3, 0x24, 0x6A, 0x01, 0x00, 0x59, 0xC3)
+                    .Build());
         }
 
 
@@ -177,6 +181,8 @@ namespace TrainerApp
             GameMemoryInjector.AddMemoryAlteration(ECheat.evCheatEasyMoney, new MemoryAlterationX86BranchInstruction(GameMemoryIO, new AbsoluteMemoryAddress(mainModuleAddress + 0x1FFF98), GameMemoryInjector.GetInjectedCodeCaveAddress(ECodeCave.evCodeCaveEasyMoney), EX86BranchInstructionType.evCallNearRelative32, 9));
             GameMemoryInjector.AddMemoryAlteration(ECheat.evCheatEasyMoney, new MemoryAlterationX86BranchInstruction(GameMemoryIO, new AbsoluteMemoryAddress(mainModuleAddress + 0x200060), GameMemoryInjector.GetInjectedCodeCaveAddress(ECodeCave.evCodeCaveEasyMoney), EX86BranchInstructionType.evCallNearRelative32, 9));
             GameMemoryInjector.AddMemoryAlteration(ECheat.evCheatEasyMoney, new MemoryAlterationX86BranchInstruction(GameMemoryIO, new AbsoluteMemoryAddress(mainModuleAddress + 0x5E46CE), GameMemoryInjector.GetInjectedCodeCaveAddress(ECodeCave.evCodeCaveEasyMoney), EX86BranchInstructionType.evCallNearRelative32, 9));
+
+            GameMemoryInjector.AddMemoryAlteration(ECheat.evCheatInstantSkillRecharge, new MemoryAlterationX86BranchInstruction(GameMemoryIO, new AbsoluteMemoryAddress(mainModuleAddress + 0x23821F), GameMemoryInjector.GetInjectedCodeCaveAddress(ECodeCave.evCodeCaveInstantSkillRecharge), EX86BranchInstructionType.evCallNearRelative32, 9));
         }
 
 

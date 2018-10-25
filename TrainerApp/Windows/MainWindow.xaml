@@ -27,7 +27,7 @@
 		xmlns:converters="clr-namespace:TrainerApp.Converters"
         mc:Ignorable="d"
 		DataContext="{Binding RelativeSource={RelativeSource Self}}"
-        Title="{x:Static props:Resources.strMainWindowTitle}" Height="350" Width="630"
+        Title="{x:Static props:Resources.strMainWindowTitle}" Height="450" Width="630"
 		SizeToContent="Height"
 		Icon="/media/icon.ico"
 		Closing="WindowClosing">
@@ -175,6 +175,10 @@
                 <StackPanel Orientation="Horizontal">
                     <CheckBox Checked="CheckBoxCheatToggled" Unchecked="CheckBoxCheatToggled" Content="{x:Static props:Resources.strChkCheatPromptEasyMoney}" Tag="{x:Static local:ECheat.evCheatEasyMoney}" />
                     <Label Content="{x:Static props:Resources.strChkCheatDescriptionEasyMoney}"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <CheckBox Checked="CheckBoxCheatToggled" Unchecked="CheckBoxCheatToggled" Content="{x:Static props:Resources.strChkCheatPromptInstantSkillRecharge}" Tag="{x:Static local:ECheat.evCheatInstantSkillRecharge}" />
+                    <Label Content="{x:Static props:Resources.strChkCheatDescriptionInstantSkillRecharge}"/>
                 </StackPanel>
             </StackPanel>
 		</GroupBox>

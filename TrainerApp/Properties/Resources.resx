@@ -135,6 +135,9 @@
   <data name="strChkCheatDescriptionInfiniteItems" xml:space="preserve">
     <value>collected items are set to 50 units, and are never decreased.</value>
   </data>
+  <data name="strChkCheatDescriptionInstantSkillRecharge" xml:space="preserve">
+    <value>Pod Programs are recharged immediateately after they are used.</value>
+  </data>
   <data name="strChkCheatDescriptionLevelUp" xml:space="preserve">
     <value>every enemy killed adds +100k EXP to the player.</value>
   </data>
@@ -152,6 +155,9 @@
   </data>
   <data name="strChkCheatPromptInfiniteItems" xml:space="preserve">
     <value>Infinite Items:</value>
+  </data>
+  <data name="strChkCheatPromptInstantSkillRecharge" xml:space="preserve">
+    <value>Instant skill recharge:</value>
   </data>
   <data name="strChkCheatPromptLevelUp" xml:space="preserve">
     <value>Easy Level-Up:</value>

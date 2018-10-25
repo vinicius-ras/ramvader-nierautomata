@@ -115,6 +115,15 @@ namespace TrainerApp.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Pod Programs are recharged immediateately after they are used..
+        /// </summary>
+        public static string strChkCheatDescriptionInstantSkillRecharge {
+            get {
+                return ResourceManager.GetString("strChkCheatDescriptionInstantSkillRecharge", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to every enemy killed adds +100k EXP to the player..
         /// </summary>
         public static string strChkCheatDescriptionLevelUp {
@@ -165,6 +174,15 @@ namespace TrainerApp.Properties {
         public static string strChkCheatPromptInfiniteItems {
             get {
                 return ResourceManager.GetString("strChkCheatPromptInfiniteItems", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Instant skill recharge:.
+        /// </summary>
+        public static string strChkCheatPromptInstantSkillRecharge {
+            get {
+                return ResourceManager.GetString("strChkCheatPromptInstantSkillRecharge", resourceCulture);
             }
         }
         
