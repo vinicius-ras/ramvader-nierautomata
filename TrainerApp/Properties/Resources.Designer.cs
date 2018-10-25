@@ -169,6 +169,15 @@ namespace TrainerApp.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Destroy enemies with a single hit during Hacking Mode..
+        /// </summary>
+        public static string strChkCheatDescriptionOneHitKillsHackingMode {
+            get {
+                return ResourceManager.GetString("strChkCheatDescriptionOneHitKillsHackingMode", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Easy Money:.
         /// </summary>
         public static string strChkCheatPromptEasyMoney {
@@ -246,6 +255,15 @@ namespace TrainerApp.Properties {
         public static string strChkCheatPromptOneHitKillsEnemies {
             get {
                 return ResourceManager.GetString("strChkCheatPromptOneHitKillsEnemies", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to One Hit Kills (in Hacking Mode):.
+        /// </summary>
+        public static string strChkCheatPromptOneHitKillsHackingMode {
+            get {
+                return ResourceManager.GetString("strChkCheatPromptOneHitKillsHackingMode", resourceCulture);
             }
         }
         

@@ -126,6 +126,10 @@ namespace TrainerApp
                 GameMemoryInjector.NewCodeCave()
                     .Bytes(0x56, 0xC1, 0xE6, 0x10, 0x29, 0xB3, 0x58, 0x08, 0x00, 0x00, 0x5E, 0xC3)
                     .Build());
+            GameMemoryInjector.SetCodeCaveDefinition(ECodeCave.evCodeCaveOneHitKillsHackingMode,
+                GameMemoryInjector.NewCodeCave()
+                    .Bytes(0x50, 0xC1, 0xE0, 0x05, 0x29, 0x87, 0x78, 0x35, 0x00, 0x00, 0x58, 0xC3)
+                    .Build());
             GameMemoryInjector.SetCodeCaveDefinition(ECodeCave.evCodeCaveEasyMoney,
                 GameMemoryInjector.NewCodeCave()
                     .Bytes(0x56, 0xC1, 0xE6, 0x09, 0x01, 0x30, 0x5E, 0x48, 0xA1, 0x88, 0x61, 0x0F, 0x41, 0x01, 0x00, 0x00, 0x00, 0xC3)
@@ -183,8 +187,10 @@ namespace TrainerApp
 
             GameMemoryInjector.AddMemoryAlteration(ECheat.evCheatInfiniteItems, new MemoryAlterationPoke(GameMemoryIO, new AbsoluteMemoryAddress(mainModuleAddress + 0x5DCFF6), new byte[] { 0xE9, 0xE2, 0xD1, 0x75, 0x00, 0x90, 0x90, 0x90 }));
             GameMemoryInjector.AddMemoryAlteration(ECheat.evCheatLevelUp, new MemoryAlterationPoke(GameMemoryIO, new AbsoluteMemoryAddress(mainModuleAddress + 0x5961AF), new byte[] { 0xE9, 0x41, 0x40, 0x7A, 0x00, 0x90 }));
+
             GameMemoryInjector.AddMemoryAlteration(ECheat.evCheatOneHitKillsEnemies, new MemoryAlterationX86BranchInstruction(GameMemoryIO, new AbsoluteMemoryAddress(mainModuleAddress + 0x34748A6), GameMemoryInjector.GetInjectedCodeCaveAddress(ECodeCave.evCodeCaveOneHitKillsEnemies), EX86BranchInstructionType.evCallNearRelative32, 6));
             GameMemoryInjector.AddMemoryAlteration(ECheat.evCheatOneHitKillsAnimals, new MemoryAlterationX86BranchInstruction(GameMemoryIO, new AbsoluteMemoryAddress(mainModuleAddress + 0x18D3FC), GameMemoryInjector.GetInjectedCodeCaveAddress(ECodeCave.evCodeCaveOneHitKillsAnimals), EX86BranchInstructionType.evCallNearRelative32, 6));
+            GameMemoryInjector.AddMemoryAlteration(ECheat.evCheatOneHitKillsHackingMode, new MemoryAlterationX86BranchInstruction(GameMemoryIO, new AbsoluteMemoryAddress(mainModuleAddress + 0x3276AF), GameMemoryInjector.GetInjectedCodeCaveAddress(ECodeCave.evCodeCaveOneHitKillsHackingMode), EX86BranchInstructionType.evCallNearRelative32, 6));
 
             GameMemoryInjector.AddMemoryAlteration(ECheat.evCheatEasyMoney, new MemoryAlterationX86BranchInstruction(GameMemoryIO, new AbsoluteMemoryAddress(mainModuleAddress + 0x1FFF98), GameMemoryInjector.GetInjectedCodeCaveAddress(ECodeCave.evCodeCaveEasyMoney), EX86BranchInstructionType.evCallNearRelative32, 9));
             GameMemoryInjector.AddMemoryAlteration(ECheat.evCheatEasyMoney, new MemoryAlterationX86BranchInstruction(GameMemoryIO, new AbsoluteMemoryAddress(mainModuleAddress + 0x200060), GameMemoryInjector.GetInjectedCodeCaveAddress(ECodeCave.evCodeCaveEasyMoney), EX86BranchInstructionType.evCallNearRelative32, 9));

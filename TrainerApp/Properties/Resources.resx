@@ -153,6 +153,9 @@
   <data name="strChkCheatDescriptionOneHitKillsEnemies" xml:space="preserve">
     <value>Kill enemies and bosses with a single hit.</value>
   </data>
+  <data name="strChkCheatDescriptionOneHitKillsHackingMode" xml:space="preserve">
+    <value>Destroy enemies with a single hit during Hacking Mode.</value>
+  </data>
   <data name="strChkCheatPromptEasyMoney" xml:space="preserve">
     <value>Easy Money:</value>
   </data>
@@ -179,6 +182,9 @@
   </data>
   <data name="strChkCheatPromptOneHitKillsEnemies" xml:space="preserve">
     <value>One Hit Kills (enemies):</value>
+  </data>
+  <data name="strChkCheatPromptOneHitKillsHackingMode" xml:space="preserve">
+    <value>One Hit Kills (in Hacking Mode):</value>
   </data>
   <data name="strGroupBoxHeaderCheats" xml:space="preserve">
     <value>Available hacks</value>

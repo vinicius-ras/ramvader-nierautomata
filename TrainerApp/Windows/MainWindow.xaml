@@ -173,6 +173,10 @@
                     <Label Content="{x:Static props:Resources.strChkCheatDescriptionOneHitKillsAnimals}"/>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal">
+                    <CheckBox Checked="CheckBoxCheatToggled" Unchecked="CheckBoxCheatToggled" Content="{x:Static props:Resources.strChkCheatPromptOneHitKillsHackingMode}" Tag="{x:Static local:ECheat.evCheatOneHitKillsHackingMode}" />
+                    <Label Content="{x:Static props:Resources.strChkCheatDescriptionOneHitKillsHackingMode}"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
                     <CheckBox Checked="CheckBoxCheatToggled" Unchecked="CheckBoxCheatToggled" Content="{x:Static props:Resources.strChkCheatPromptEasyMoney}" Tag="{x:Static local:ECheat.evCheatEasyMoney}" />
                     <Label Content="{x:Static props:Resources.strChkCheatDescriptionEasyMoney}"/>
                 </StackPanel>

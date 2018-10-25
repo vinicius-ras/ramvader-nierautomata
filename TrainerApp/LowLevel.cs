@@ -38,6 +38,8 @@ namespace TrainerApp
         evCheatOneHitKillsEnemies,
         /// <summary>Identifier for the "One Hit Kills (Animals)" cheat.</summary>
         evCheatOneHitKillsAnimals,
+        /// <summary>Identifier for the "One Hit Kills (Hacking Mode)" cheat.</summary>
+        evCheatOneHitKillsHackingMode,
         /// <summary>Identifier for the "Easy Money" cheat.</summary>
         evCheatEasyMoney,
         /// <summary>Identifier for the "Instant Skill Recharge" cheat.</summary>
@@ -62,6 +64,8 @@ namespace TrainerApp
         evCodeCaveOneHitKillsEnemies,
         /// <summary>Identifier for the "One Hit Kills (Animals)" code cave.</summary>
         evCodeCaveOneHitKillsAnimals,
+        /// <summary>Identifier for the "One Hit Kills (Hacking Mode)" code cave.</summary>
+        evCodeCaveOneHitKillsHackingMode,
         /// <summary>Identifier for the "Easy Money" code cave.</summary>
         evCodeCaveEasyMoney,
         /// <summary>Identifier for the "Instant Skill Recharge" code cave.</summary>
