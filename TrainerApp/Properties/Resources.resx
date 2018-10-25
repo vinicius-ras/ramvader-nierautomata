@@ -135,6 +135,9 @@
   <data name="strChkCheatDescriptionInfiniteItems" xml:space="preserve">
     <value>collected items are set to 50 units, and are never decreased.</value>
   </data>
+  <data name="strChkCheatDescriptionInstantHacking" xml:space="preserve">
+    <value>9S enters Hacking Game immediately (no need to wait).</value>
+  </data>
   <data name="strChkCheatDescriptionInstantSkillRecharge" xml:space="preserve">
     <value>Pod Programs are recharged immediateately after they are used.</value>
   </data>
@@ -155,6 +158,9 @@
   </data>
   <data name="strChkCheatPromptInfiniteItems" xml:space="preserve">
     <value>Infinite Items:</value>
+  </data>
+  <data name="strChkCheatPromptInstantHacking" xml:space="preserve">
+    <value>Instant Hacking:</value>
   </data>
   <data name="strChkCheatPromptInstantSkillRecharge" xml:space="preserve">
     <value>Instant skill recharge:</value>

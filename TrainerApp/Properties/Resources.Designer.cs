@@ -115,6 +115,15 @@ namespace TrainerApp.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to 9S enters Hacking Game immediately (no need to wait)..
+        /// </summary>
+        public static string strChkCheatDescriptionInstantHacking {
+            get {
+                return ResourceManager.GetString("strChkCheatDescriptionInstantHacking", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Pod Programs are recharged immediateately after they are used..
         /// </summary>
         public static string strChkCheatDescriptionInstantSkillRecharge {
@@ -174,6 +183,15 @@ namespace TrainerApp.Properties {
         public static string strChkCheatPromptInfiniteItems {
             get {
                 return ResourceManager.GetString("strChkCheatPromptInfiniteItems", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Instant Hacking:.
+        /// </summary>
+        public static string strChkCheatPromptInstantHacking {
+            get {
+                return ResourceManager.GetString("strChkCheatPromptInstantHacking", resourceCulture);
             }
         }
         

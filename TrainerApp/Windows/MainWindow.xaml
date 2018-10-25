@@ -180,6 +180,10 @@
                     <CheckBox Checked="CheckBoxCheatToggled" Unchecked="CheckBoxCheatToggled" Content="{x:Static props:Resources.strChkCheatPromptInstantSkillRecharge}" Tag="{x:Static local:ECheat.evCheatInstantSkillRecharge}" />
                     <Label Content="{x:Static props:Resources.strChkCheatDescriptionInstantSkillRecharge}"/>
                 </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <CheckBox Checked="CheckBoxCheatToggled" Unchecked="CheckBoxCheatToggled" Content="{x:Static props:Resources.strChkCheatPromptInstantHacking}" Tag="{x:Static local:ECheat.evCheatInstantHacking}" />
+                    <Label Content="{x:Static props:Resources.strChkCheatDescriptionInstantHacking}"/>
+                </StackPanel>
             </StackPanel>
 		</GroupBox>
 

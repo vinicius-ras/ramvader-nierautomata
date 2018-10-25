@@ -40,7 +40,8 @@ namespace TrainerApp
         evCheatEasyMoney,
         /// <summary>Identifier for the "Instant Skill Recharge" cheat.</summary>
         evCheatInstantSkillRecharge,
-
+        /// <summary>Identifier for the "Instant Hacking" cheat.</summary>
+        evCheatInstantHacking,
     }
 
 
@@ -63,6 +64,8 @@ namespace TrainerApp
         evCodeCaveEasyMoney,
         /// <summary>Identifier for the "Instant Skill Recharge" code cave.</summary>
         evCodeCaveInstantSkillRecharge,
+        /// <summary>Identifier for the "Instant Hacking" code cave.</summary>
+        evCodeCaveInstantHacking,
     }
 
 
