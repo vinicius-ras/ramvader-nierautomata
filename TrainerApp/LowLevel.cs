@@ -28,6 +28,8 @@ namespace TrainerApp
 	{
         /// <summary>Identifier for the "God Mode" cheat.</summary>
         evCheatGodMode,
+        /// <summary>Identifier for the "God Mode (Hacking Mode)" cheat.</summary>
+        evCheatGodModeHackingMode,
         /// <summary>Identifier for the "Infinite Items" cheat.</summary>
         evCheatInfiniteItems,
         /// <summary>Identifier for the "Level Up" cheat.</summary>

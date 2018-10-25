@@ -132,6 +132,9 @@
   <data name="strChkCheatDescriptionGodMode" xml:space="preserve">
     <value>enemy hits deal no damage on you.</value>
   </data>
+  <data name="strChkCheatDescriptionGodModeHackingMode" xml:space="preserve">
+    <value>god mode during Hacking Mode.</value>
+  </data>
   <data name="strChkCheatDescriptionInfiniteItems" xml:space="preserve">
     <value>collected items are set to 50 units, and are never decreased.</value>
   </data>
@@ -155,6 +158,9 @@
   </data>
   <data name="strChkCheatPromptGodMode" xml:space="preserve">
     <value>God Mode:</value>
+  </data>
+  <data name="strChkCheatPromptGodModeHackingMode" xml:space="preserve">
+    <value>God Mode (Hacking):</value>
   </data>
   <data name="strChkCheatPromptInfiniteItems" xml:space="preserve">
     <value>Infinite Items:</value>

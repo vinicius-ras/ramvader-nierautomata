@@ -106,6 +106,15 @@ namespace TrainerApp.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to god mode during Hacking Mode..
+        /// </summary>
+        public static string strChkCheatDescriptionGodModeHackingMode {
+            get {
+                return ResourceManager.GetString("strChkCheatDescriptionGodModeHackingMode", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to collected items are set to 50 units, and are never decreased..
         /// </summary>
         public static string strChkCheatDescriptionInfiniteItems {
@@ -174,6 +183,15 @@ namespace TrainerApp.Properties {
         public static string strChkCheatPromptGodMode {
             get {
                 return ResourceManager.GetString("strChkCheatPromptGodMode", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to God Mode (Hacking):.
+        /// </summary>
+        public static string strChkCheatPromptGodModeHackingMode {
+            get {
+                return ResourceManager.GetString("strChkCheatPromptGodModeHackingMode", resourceCulture);
             }
         }
         
