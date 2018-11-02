@@ -136,7 +136,7 @@ namespace TrainerApp
                     .Build());
             GameMemoryInjector.SetCodeCaveDefinition(ECodeCave.evCodeCaveInstantSkillRecharge,
                 GameMemoryInjector.NewCodeCave()
-                    .Bytes(0x51, 0x48, 0x31, 0xC9, 0x48, 0x89, 0x8C, 0xC3, 0x24, 0x6A, 0x01, 0x00, 0x59, 0xC3)
+                    .Bytes(0x50, 0x53, 0x51, 0x48, 0x31, 0xC0, 0x48, 0x8D, 0x9F, 0x24, 0x6A, 0x01, 0x00, 0xB1, 0x03, 0x89, 0x04, 0x8B, 0xFE, 0xC9, 0x7D, 0xF9, 0x59, 0x5B, 0x58, 0xF3, 0x0F, 0x10, 0x87, 0x24, 0x6A, 0x01, 0x00, 0xC3)
                     .Build());
             GameMemoryInjector.SetCodeCaveDefinition(ECodeCave.evCodeCaveInstantHacking,
                 GameMemoryInjector.NewCodeCave()
@@ -196,7 +196,7 @@ namespace TrainerApp
             GameMemoryInjector.AddMemoryAlteration(ECheat.evCheatEasyMoney, new MemoryAlterationX86BranchInstruction(GameMemoryIO, new AbsoluteMemoryAddress(mainModuleAddress + 0x200060), GameMemoryInjector.GetInjectedCodeCaveAddress(ECodeCave.evCodeCaveEasyMoney), EX86BranchInstructionType.evCallNearRelative32, 9));
             GameMemoryInjector.AddMemoryAlteration(ECheat.evCheatEasyMoney, new MemoryAlterationX86BranchInstruction(GameMemoryIO, new AbsoluteMemoryAddress(mainModuleAddress + 0x5E46CE), GameMemoryInjector.GetInjectedCodeCaveAddress(ECodeCave.evCodeCaveEasyMoney), EX86BranchInstructionType.evCallNearRelative32, 9));
 
-            GameMemoryInjector.AddMemoryAlteration(ECheat.evCheatInstantSkillRecharge, new MemoryAlterationX86BranchInstruction(GameMemoryIO, new AbsoluteMemoryAddress(mainModuleAddress + 0x23821F), GameMemoryInjector.GetInjectedCodeCaveAddress(ECodeCave.evCodeCaveInstantSkillRecharge), EX86BranchInstructionType.evCallNearRelative32, 9));
+            GameMemoryInjector.AddMemoryAlteration(ECheat.evCheatInstantSkillRecharge, new MemoryAlterationX86BranchInstruction(GameMemoryIO, new AbsoluteMemoryAddress(mainModuleAddress + 0x238881), GameMemoryInjector.GetInjectedCodeCaveAddress(ECodeCave.evCodeCaveInstantSkillRecharge), EX86BranchInstructionType.evCallNearRelative32, 8));
             GameMemoryInjector.AddMemoryAlteration(ECheat.evCheatInstantHacking, new MemoryAlterationX86BranchInstruction(GameMemoryIO, new AbsoluteMemoryAddress(mainModuleAddress + 0x258064), GameMemoryInjector.GetInjectedCodeCaveAddress(ECodeCave.evCodeCaveInstantHacking), EX86BranchInstructionType.evCallNearRelative32, 10));
         }
 
