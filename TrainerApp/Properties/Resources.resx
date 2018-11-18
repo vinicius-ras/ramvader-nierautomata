@@ -130,13 +130,16 @@
     <value>Collected money pieces are worth much more cash.</value>
   </data>
   <data name="strChkCheatDescriptionGodMode" xml:space="preserve">
-    <value>enemy hits deal no damage on you.</value>
+    <value>Enemy hits deal no damage on you.</value>
   </data>
   <data name="strChkCheatDescriptionGodModeHackingMode" xml:space="preserve">
-    <value>god mode during Hacking Mode.</value>
+    <value>God mode during Hacking Mode.</value>
+  </data>
+  <data name="strChkCheatDescriptionInfiniteBerserkMode" xml:space="preserve">
+    <value>A2's Berserk Mode can be used unlimitedly.</value>
   </data>
   <data name="strChkCheatDescriptionInfiniteItems" xml:space="preserve">
-    <value>collected items are set to 50 units, and are never decreased.</value>
+    <value>Collected items are set to 50 units, and are never decreased.</value>
   </data>
   <data name="strChkCheatDescriptionInstantHacking" xml:space="preserve">
     <value>9S enters Hacking Game immediately (no need to wait).</value>
@@ -145,7 +148,7 @@
     <value>Pod Programs are recharged immediateately after they are used.</value>
   </data>
   <data name="strChkCheatDescriptionLevelUp" xml:space="preserve">
-    <value>every enemy killed adds +100k EXP to the player.</value>
+    <value>Every enemy killed adds +100k EXP to the player.</value>
   </data>
   <data name="strChkCheatDescriptionOneHitKillsAnimals" xml:space="preserve">
     <value>Kill animals (mooses and boars) with a single hit.</value>
@@ -165,6 +168,9 @@
   <data name="strChkCheatPromptGodModeHackingMode" xml:space="preserve">
     <value>God Mode (Hacking):</value>
   </data>
+  <data name="strChkCheatPromptInfiniteBerserkMode" xml:space="preserve">
+    <value>Infinite Berserk Mode:</value>
+  </data>
   <data name="strChkCheatPromptInfiniteItems" xml:space="preserve">
     <value>Infinite Items:</value>
   </data>
@@ -172,7 +178,7 @@
     <value>Instant Hacking:</value>
   </data>
   <data name="strChkCheatPromptInstantSkillRecharge" xml:space="preserve">
-    <value>Instant skill recharge:</value>
+    <value>Instant Pod Program Recharge:</value>
   </data>
   <data name="strChkCheatPromptLevelUp" xml:space="preserve">
     <value>Easy Level-Up:</value>

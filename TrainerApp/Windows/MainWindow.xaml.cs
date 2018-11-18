@@ -198,6 +198,8 @@ namespace TrainerApp
 
             GameMemoryInjector.AddMemoryAlteration(ECheat.evCheatInstantSkillRecharge, new MemoryAlterationX86BranchInstruction(GameMemoryIO, new AbsoluteMemoryAddress(mainModuleAddress + 0x25B9C4), GameMemoryInjector.GetInjectedCodeCaveAddress(ECodeCave.evCodeCaveInstantSkillRecharge), EX86BranchInstructionType.evCallNearRelative32, 7));
             GameMemoryInjector.AddMemoryAlteration(ECheat.evCheatInstantHacking, new MemoryAlterationX86BranchInstruction(GameMemoryIO, new AbsoluteMemoryAddress(mainModuleAddress + 0x258064), GameMemoryInjector.GetInjectedCodeCaveAddress(ECodeCave.evCodeCaveInstantHacking), EX86BranchInstructionType.evCallNearRelative32, 10));
+
+            GameMemoryInjector.AddMemoryAlteration(ECheat.evCheatInfiniteBerserkMode, new MemoryAlterationNOP(GameMemoryIO, new AbsoluteMemoryAddress(mainModuleAddress + 0x213B9E), 6));
         }
 
 

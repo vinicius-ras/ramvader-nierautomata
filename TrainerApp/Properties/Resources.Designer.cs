@@ -97,7 +97,7 @@ namespace TrainerApp.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to enemy hits deal no damage on you..
+        ///   Looks up a localized string similar to Enemy hits deal no damage on you..
         /// </summary>
         public static string strChkCheatDescriptionGodMode {
             get {
@@ -106,7 +106,7 @@ namespace TrainerApp.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to god mode during Hacking Mode..
+        ///   Looks up a localized string similar to God mode during Hacking Mode..
         /// </summary>
         public static string strChkCheatDescriptionGodModeHackingMode {
             get {
@@ -115,7 +115,16 @@ namespace TrainerApp.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to collected items are set to 50 units, and are never decreased..
+        ///   Looks up a localized string similar to A2&apos;s Berserk Mode can be used unlimitedly..
+        /// </summary>
+        public static string strChkCheatDescriptionInfiniteBerserkMode {
+            get {
+                return ResourceManager.GetString("strChkCheatDescriptionInfiniteBerserkMode", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Collected items are set to 50 units, and are never decreased..
         /// </summary>
         public static string strChkCheatDescriptionInfiniteItems {
             get {
@@ -142,7 +151,7 @@ namespace TrainerApp.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to every enemy killed adds +100k EXP to the player..
+        ///   Looks up a localized string similar to Every enemy killed adds +100k EXP to the player..
         /// </summary>
         public static string strChkCheatDescriptionLevelUp {
             get {
@@ -205,6 +214,15 @@ namespace TrainerApp.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Infinite Berserk Mode:.
+        /// </summary>
+        public static string strChkCheatPromptInfiniteBerserkMode {
+            get {
+                return ResourceManager.GetString("strChkCheatPromptInfiniteBerserkMode", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Infinite Items:.
         /// </summary>
         public static string strChkCheatPromptInfiniteItems {
@@ -223,7 +241,7 @@ namespace TrainerApp.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Instant skill recharge:.
+        ///   Looks up a localized string similar to Instant Pod Program Recharge:.
         /// </summary>
         public static string strChkCheatPromptInstantSkillRecharge {
             get {

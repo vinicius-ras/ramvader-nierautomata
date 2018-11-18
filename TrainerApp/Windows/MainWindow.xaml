@@ -157,12 +157,8 @@
                     <Label Content="{x:Static props:Resources.strChkCheatDescriptionGodMode}"/>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal">
-                    <CheckBox Checked="CheckBoxCheatToggled" Unchecked="CheckBoxCheatToggled" Content="{x:Static props:Resources.strChkCheatPromptInfiniteItems}" Tag="{x:Static local:ECheat.evCheatInfiniteItems}" />
-                    <Label Content="{x:Static props:Resources.strChkCheatDescriptionInfiniteItems}"/>
-                </StackPanel>
-                <StackPanel Orientation="Horizontal">
-                    <CheckBox Checked="CheckBoxCheatToggled" Unchecked="CheckBoxCheatToggled" Content="{x:Static props:Resources.strChkCheatPromptLevelUp}" Tag="{x:Static local:ECheat.evCheatLevelUp}" />
-                    <Label Content="{x:Static props:Resources.strChkCheatDescriptionLevelUp}"/>
+                    <CheckBox Checked="CheckBoxCheatToggled" Unchecked="CheckBoxCheatToggled" Content="{x:Static props:Resources.strChkCheatPromptGodModeHackingMode}" Tag="{x:Static local:ECheat.evCheatGodModeHackingMode}" />
+                    <Label Content="{x:Static props:Resources.strChkCheatDescriptionGodModeHackingMode}"/>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal">
                     <CheckBox Checked="CheckBoxCheatToggled" Unchecked="CheckBoxCheatToggled" Content="{x:Static props:Resources.strChkCheatPromptOneHitKillsEnemies}" Tag="{x:Static local:ECheat.evCheatOneHitKillsEnemies}" />
@@ -177,10 +173,6 @@
                     <Label Content="{x:Static props:Resources.strChkCheatDescriptionOneHitKillsHackingMode}"/>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal">
-                    <CheckBox Checked="CheckBoxCheatToggled" Unchecked="CheckBoxCheatToggled" Content="{x:Static props:Resources.strChkCheatPromptEasyMoney}" Tag="{x:Static local:ECheat.evCheatEasyMoney}" />
-                    <Label Content="{x:Static props:Resources.strChkCheatDescriptionEasyMoney}"/>
-                </StackPanel>
-                <StackPanel Orientation="Horizontal">
                     <CheckBox Checked="CheckBoxCheatToggled" Unchecked="CheckBoxCheatToggled" Content="{x:Static props:Resources.strChkCheatPromptInstantSkillRecharge}" Tag="{x:Static local:ECheat.evCheatInstantSkillRecharge}" />
                     <Label Content="{x:Static props:Resources.strChkCheatDescriptionInstantSkillRecharge}"/>
                 </StackPanel>
@@ -189,8 +181,20 @@
                     <Label Content="{x:Static props:Resources.strChkCheatDescriptionInstantHacking}"/>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal">
-                    <CheckBox Checked="CheckBoxCheatToggled" Unchecked="CheckBoxCheatToggled" Content="{x:Static props:Resources.strChkCheatPromptGodModeHackingMode}" Tag="{x:Static local:ECheat.evCheatGodModeHackingMode}" />
-                    <Label Content="{x:Static props:Resources.strChkCheatDescriptionGodModeHackingMode}"/>
+                    <CheckBox Checked="CheckBoxCheatToggled" Unchecked="CheckBoxCheatToggled" Content="{x:Static props:Resources.strChkCheatPromptInfiniteItems}" Tag="{x:Static local:ECheat.evCheatInfiniteItems}" />
+                    <Label Content="{x:Static props:Resources.strChkCheatDescriptionInfiniteItems}"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <CheckBox Checked="CheckBoxCheatToggled" Unchecked="CheckBoxCheatToggled" Content="{x:Static props:Resources.strChkCheatPromptInfiniteBerserkMode}" Tag="{x:Static local:ECheat.evCheatInfiniteBerserkMode}" />
+                    <Label Content="{x:Static props:Resources.strChkCheatDescriptionInfiniteBerserkMode}"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <CheckBox Checked="CheckBoxCheatToggled" Unchecked="CheckBoxCheatToggled" Content="{x:Static props:Resources.strChkCheatPromptLevelUp}" Tag="{x:Static local:ECheat.evCheatLevelUp}" />
+                    <Label Content="{x:Static props:Resources.strChkCheatDescriptionLevelUp}"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <CheckBox Checked="CheckBoxCheatToggled" Unchecked="CheckBoxCheatToggled" Content="{x:Static props:Resources.strChkCheatPromptEasyMoney}" Tag="{x:Static local:ECheat.evCheatEasyMoney}" />
+                    <Label Content="{x:Static props:Resources.strChkCheatDescriptionEasyMoney}"/>
                 </StackPanel>
             </StackPanel>
 		</GroupBox>

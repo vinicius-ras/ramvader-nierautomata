@@ -46,6 +46,8 @@ namespace TrainerApp
         evCheatInstantSkillRecharge,
         /// <summary>Identifier for the "Instant Hacking" cheat.</summary>
         evCheatInstantHacking,
+        /// <summary>Identifier for the "Infinite Berserk Mode" cheat.</summary>
+        evCheatInfiniteBerserkMode,
     }
 
 
